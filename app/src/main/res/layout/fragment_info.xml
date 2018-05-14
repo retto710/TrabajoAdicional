@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InfoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game's information"
+            style="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/title"
+            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game's information"
+            style="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome"
+            app:layout_constraintBottom_toTopOf="@id/txtSubtitle"
+            />
+       <TextView
+           android:id="@+id/txtSubtitle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Points for correct Answer"
+           style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+           app:layout_constraintTop_toBottomOf="@id/title"
+           app:layout_constraintBottom_toTopOf="@id/txtEasy"
+           />
+        <TextView
+            android:id="@+id/txtEasy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy: +20pts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtitle"
+            app:layout_constraintBottom_toTopOf="@id/txtMedium"
+            />
+
+        <TextView
+            android:id="@+id/txtMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium: +40pts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtEasy"
+            app:layout_constraintBottom_toTopOf="@id/txtDifficult"
+            />
+        <TextView
+            android:id="@+id/txtDifficult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard: +60pts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtMedium"
+            app:layout_constraintBottom_toTopOf="@id/txtSubtitle2"
+            />
+
+        <TextView
+            android:id="@+id/txtSubtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points for incorrect Answer"
+            style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+            app:layout_constraintTop_toBottomOf="@id/txtDifficult"
+            app:layout_constraintBottom_toTopOf="@id/txtEasy2"
+            />
+        <TextView
+            android:id="@+id/txtEasy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy: -40pts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtitle2"
+            app:layout_constraintBottom_toTopOf="@id/txtMedium2"
+            />
+
+        <TextView
+            android:id="@+id/txtMedium2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium: -30pts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtEasy2"
+            app:layout_constraintBottom_toTopOf="@id/txtDifficult2"
+            />
+        <TextView
+            android:id="@+id/txtDifficult2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard: -20pts"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtMedium2"
+            app:layout_constraintBottom_toTopOf="@id/txtSubtitle3"
+            />
+        <TextView
+            android:id="@+id/txtSubtitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points for time"
+            style="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+            app:layout_constraintTop_toBottomOf="@id/txtDifficult2"
+            app:layout_constraintBottom_toTopOf="@id/txtTime"
+            />
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+50pts per second missing"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtitle3"
+            app:layout_constraintBottom_toTopOf="@id/btnStart"
+            />
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTime"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
